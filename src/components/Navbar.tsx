@@ -124,7 +124,7 @@ const YiWebsite = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <img
-              src="./public/assets/png/63b0a64b5f4ae600b85ed4151030e9e93280b0ca-2160x2160.webp"
+              src="./assets/png/63b0a64b5f4ae600b85ed4151030e9e93280b0ca-2160x2160.webp"
               alt="About Us"
               className="w-full md:w-1/2 rounded-lg"
             />
