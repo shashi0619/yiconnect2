@@ -85,7 +85,7 @@ const YiWebsite = () => {
 
       {/* Hero Section */}
       <section className="h-screen bg-[#03071c] flex flex-col justify-center items-center text-center">
-        <h1 className="text-3xl md:text-6xl font-urbanist text-center font-bold mb-8">
+        <h1 className="text-2xl md:text-6xl font-urbanist text-center font-bold mb-8">
           Elevate Your Business with Next-Gen AI,<br className="hidden md:block" />
           Web & Mobile Apps
         </h1>
