@@ -1,4 +1,3 @@
-import React from "react";
 import CustomNavbar from "./components/Navbar";
 
 function App() {

@@ -18,7 +18,7 @@ const YiWebsite = () => {
             onClick={() => (window.location.href = "/")}
           >
             <img
-              src="./public/assets/jpeg/logo.svg"
+              src="./assets/jpeg/logo.svg"
               alt="Logo"
               className="w-12 h-12 rounded-full"
             />
