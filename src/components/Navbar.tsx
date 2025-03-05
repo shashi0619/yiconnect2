@@ -85,12 +85,13 @@ const YiWebsite = () => {
 
       {/* Hero Section */}
       <section className="h-screen bg-[#03071c] flex flex-col justify-center items-center text-center">
-        <h1 className="text-2xl md:text-6xl font-urbanist text-center font-bold mb-8">
+        <h1 className="text-4xl md:text-6xl font-urbanist text-center font-bold mb-8">
           Elevate Your Business with Next-Gen AI,<br className="hidden md:block" />
           Web & Mobile Apps
         </h1>
         <img
-          className="absolute -z-9 left-[1rem] sm:left-[20rem] md:left-[30rem] w-32 sm:w-48 md:w-56 lg:w-64"
+          className="absolute -z-9 left-[1rem] sm:left-[20rem] md:left-[30rem] w-32 sm:w-48 md:w-56 lg:w-[61rem]
+"
           src="./assets/svg/Ellipse 2.svg"
           alt="Background Ellipse"
         />
@@ -180,6 +181,12 @@ const YiWebsite = () => {
 
       <div className="flex flex-col items-center justify-start min-h-screen px-8">
         <h2 className="text-2xl font-bold text-[#885EFE] mb-12">Our Expertise</h2>
+        <img
+          className="absolute -z-9 left-[1rem] sm:left-[20rem] md:left-[50rem] w-32 sm:w-48 md:w-56 lg:w-[61rem]
+"
+          src="./assets/svg/Ellipse 2.svg"
+          alt="Background Ellipse"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-36 md:gap-y-16 gap-6">
           {[
