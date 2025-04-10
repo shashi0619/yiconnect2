@@ -6,6 +6,12 @@ const YiWebsite = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const expertiseCards = [
+    { src: "./assets/png/ai.png", title: "AI Solutions" },
+    { src: "./assets/png/web-and-mobile.jpg", title: "Web & Mobile Apps" },
+    { src: "./assets/png/qa (1).jpg", title: "QA" },
+    { src: "./assets/png/devops.png", title: "DevOps" },
+  ];
 
   return (
     <div className="bg-[#03071c] text-white font-source-sans-pro">
@@ -179,36 +185,45 @@ const YiWebsite = () => {
 
 
 
-      <div className="flex flex-col items-center justify-start min-h-screen px-8">
-        <h2 className="text-2xl font-bold text-[#885EFE] mb-12">Our Expertise</h2>
-        <img
-          className="absolute -z-9 left-[1rem] sm:left-[20rem] md:left-[50rem] w-32 sm:w-48 md:w-56 lg:w-[61rem]
-"
-          src="./assets/svg/Ellipse 2.svg"
-          alt="Background Ellipse"
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-36 md:gap-y-16 gap-6">
-          {[
-            { src: "./assets/png/ai.png", title: "AI Solutions" },
-            { src: "./assets/png/web-and-mobile.jpg", title: "Web & Mobile Apps" },
-            { src: "./assets/png/qa (1).jpg", title: "QA" },
-            { src: "./assets/png/devops.png", title: "DevOps" },
-          ].map((item, index) => (
+      <div className="flex flex-col items-center justify-start min-h-screen px-8 py-16 bg-[#03071c] to-gray-50">
+      <h2 className="text-2xl font-bold text-[#885EFE] mb-12">Our Expertise</h2>
+      
+      <div className="relative w-full max-w-6xl">
+        {/* Background decorative element */}
+        <div className="absolute -z-10 right-0 top-1/4 w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-60"></div>
+        <div className="absolute -z-10 left-0 bottom-1/4 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-24 gap-y-12 relative z-10">
+          {expertiseCards.map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg w-80"
+              className="group relative flex flex-col bg-white border border-slate-200 rounded-lg w-full max-w-sm mx-auto
+                         transition-all duration-300 ease-in-out
+                         hover:shadow-[0_0_30px_rgba(136,94,254,0.15)]
+                         hover:scale-[1.02]
+                         hover:border-purple-200"
             >
-              <div className="relative h-48 m-2.5 overflow-hidden text-white rounded-md">
-                <img src={item.src} alt="card-image" className="w-full h-full object-cover" />
+              <div className="relative h-56 m-3 overflow-hidden rounded-md">
+                <img 
+                  src={item.src} 
+                  alt={`${item.title} illustration`} 
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" 
+                />
+                {/* Glow overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#885EFE]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="p-3">
-                <h6 className="mb-2 text-slate-800 text-xl text-center font-semibold">{item.title}</h6>
+              
+              <div className="p-5">
+                <h3 className="mb-2 text-slate-800 text-xl text-center font-semibold group-hover:text-[#885EFE] transition-colors duration-300">{item.title}</h3>
+                
+                {/* Hover indicator line */}
+                <div className="w-0 h-0.5 bg-[#885EFE] mx-auto transition-all duration-300 group-hover:w-1/3"></div>
               </div>
             </div>
           ))}
         </div>
       </div>
+    </div>
 
 
       {/* contact form  */}
